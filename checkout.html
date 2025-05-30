@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block title %}Checkout{% endblock %}
+
+{% block content %}
+<h1>Checkout</h1>
+<p>Total: ${{ total }}</p>
+<form action="{{ url_for('create-checkout-session') }}" method="POST">
+    <button type="submit" class="button">Pay Now</button>
+</form>
+{% endblock %}
+

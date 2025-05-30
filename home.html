@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h1>Welcome to the eCommerce Store</h1>
+<div class="products">
+    {% for product in products %}
+    <div class="product">
+        <h2>{{ product['title'] }}</h2>
+        <p>{{ product['description'] }}</p>
+        <p>Price: ${{ product['price'] }}</p>
+        <a href="{{ url_for('add_to_cart', product_id=product['id']) }}" class="button">Add to Cart</a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
+
