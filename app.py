@@ -9,12 +9,12 @@ import requests
 app = Flask(__name__)
 
 # Configure the database URI (Update with your credentials)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:root@localhost/flask_app_db1'
-app.config['SECRET_KEY'] = 'pk_test_51QUmR6GGXmMuw14gyFBdHkw9lnMzZFlStePlPkhmguznera8hEffTsypUjBtw6hZUxSgUmLHadE5K9FWImwKEWjl00e2a9ZzZk'  # Change this
+app.config['SQLALCHEMY_DATABASE_URI'] = 'your database uri'
+app.config['SECRET_KEY'] = 'your secret key'  # Change this
 db = SQLAlchemy(app)
 
 # Stripe API configuration
-stripe.api_key = "sk_test_51QUmR6GGXmMuw14gcvDSMct6s7pMrfSensZLIhwRZB0xO5yas6dWoEefXWFD9tO03dBt7zaUrvf61SrAqAAwQwXH00aOCIlCFM"  # Change this
+stripe.api_key = "your api key"  # Change this
 
 # Initialize LoginManager
 login_manager = LoginManager()
